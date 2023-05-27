@@ -1,0 +1,16 @@
+<ul class="list-group">
+  <li
+    class="list-group-item"
+    *ngFor="let device of devices"
+    (click)="setActive.emit(device)"
+    [ngClass]="{ active: device.id === active?.id }"
+  >
+
+  <fb-os-icon [os]="device.os"></fb-os-icon>
+    {{ device.label }}
+    <span class="pull-right">
+      <fb-price [value]="device.price"></fb-price>
+      <i class="fa fa-trash" (click)="deleteHandler($event, device)"></i>
+    </span>
+  </li>
+</ul>

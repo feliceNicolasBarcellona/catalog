@@ -1,0 +1,15 @@
+<fb-card title="FORM">
+  <fb-catalog-form
+    [active]="store.active"
+    (reset)="actions.reset()"
+    (save)="actions.save($event)"
+  ></fb-catalog-form>
+</fb-card>
+<fb-card title="LIST">
+  <fb-catalog-list
+    [devices]="store.devices"
+    [active]="store.active"
+    (setActive)="actions.setActive($event)"
+    (delete)="actions.deleteHandler($event)"
+  ></fb-catalog-list>
+</fb-card>

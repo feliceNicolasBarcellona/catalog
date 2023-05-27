@@ -1,0 +1,8 @@
+<i
+  class="fa"
+  [ngClass]="{
+    'fa-android': os === 'android',
+    'fa-apple': os === 'ios'
+  }"
+  [style.color]="os === 'android' ? 'green' : 'black'"
+></i>

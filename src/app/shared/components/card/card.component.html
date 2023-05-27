@@ -1,0 +1,15 @@
+<div class="card bg-dark text-white mb-3">
+  <div class="card-header" (click)="opened = !opened">
+    <i
+      class="fa"
+      [ngClass]="{
+        'fa-arrow-right': opened,
+        'fa-arrow-down': !opened
+      }"
+    ></i>
+    {{ title }}
+  </div>
+  <div *ngIf="opened" class="card-body">
+    <ng-content></ng-content>
+  </div>
+</div>
